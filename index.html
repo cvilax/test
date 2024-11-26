@@ -46,20 +46,7 @@
             Tu navegador no soporta el elemento de audio.
         </audio>
     </div>
-
-    <script>
-        // Enlace del streaming
-        const streamingUrl = "https://server01.heplayer.com/8228/stream"; 
-
-        // Configurar y reproducir automáticamente
-        const audioPlayer = document.getElementById('audio-player');
-        audioPlayer.src = streamingUrl;
-
-        audioPlayer.play().catch(error => {
-            console.error('Error al reproducir automáticamente:', error);
-        });
-    </script>
-    <br>
+ <br>
     <div id="chat-container">
     <div id="login-form">
       <h3>Iniciar Sesión para interactuar en el chat</h3>
@@ -74,5 +61,18 @@
   </div>
 
   <script src="chat.js"></script>
+    <script>
+        // Enlace del streaming
+        const streamingUrl = "https://server01.heplayer.com/8228/stream"; 
+
+        // Configurar y reproducir automáticamente
+        const audioPlayer = document.getElementById('audio-player');
+        audioPlayer.src = streamingUrl;
+
+        audioPlayer.play().catch(error => {
+            console.error('Error al reproducir automáticamente:', error);
+        });
+    </script>
+   
 </body>
 </html>
