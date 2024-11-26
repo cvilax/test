@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Streaming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Algo Bueno.com</h1>
+        <p>¡Reproduciendo tu estación favorita las 24 horas!.</p>
+        <audio id="audio-player" controls autoplay>
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <script>
+        // Enlace del streaming
+        const streamingUrl = "https://server01.heplayer.com/8228/stream"; 
+
+        // Configurar y reproducir automáticamente
+        const audioPlayer = document.getElementById('audio-player');
+        audioPlayer.src = streamingUrl;
+
+        audioPlayer.play().catch(error => {
+            console.error('Error al reproducir automáticamente:', error);
+        });
+    </script>
+</body>
+</html>
